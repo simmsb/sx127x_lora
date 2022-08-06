@@ -144,11 +144,11 @@
 //! support is available in `embedded-hal`, then this will be added. It is possible to implement this function on a
 //! device-to-device basis by retrieving a packet with the `read_packet()` function.
 
-mod radio_traits;
+pub mod radio_traits;
 pub use radio_traits::EmbeddedRadio;
 
 #[cfg(feature = "sx127x_lora")]
-mod sx127x_lora;
+pub mod sx127x_lora;
 #[cfg(feature = "sx127x_lora")]
 pub use sx127x_lora::LoRa;
 
